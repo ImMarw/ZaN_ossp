@@ -4,11 +4,11 @@
     <form action="submit_item.php" method="post" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="name" class="form-label">Název předmětu</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+            <input type="text" class="form-control" id="name" name="name" maxlength="35" required>
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Popis předmětu</label>
-            <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+            <textarea class="form-control" id="description" name="description" rows="4" maxlength ="100" required></textarea>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Obrázek předmětu</label>
