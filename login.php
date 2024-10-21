@@ -11,8 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $stmt->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
+        $_SESSION['role'] = $user['role'];
+        $_SESSION['logged_in'] = true;
         header('Location: index.php');
         exit();
     } else {
@@ -24,7 +25,9 @@ include 'templates/header.php';
 ?>
 
 <h2 class="mb-4">Přihlášení</h2>
-<?php if (!empty($error)) { echo "<p class='text-danger'>$error</p>"; } ?>
+<?php if (!empty($error)) {
+    echo "<p class='text-danger'>$error</p>";
+} ?>
 <form action="login.php" method="POST">
     <div class="mb-3">
         <label for="username" class="form-label">Uživatelské jméno</label>
