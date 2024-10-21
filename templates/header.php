@@ -18,7 +18,7 @@ if ($_SESSION['logged_in'] == true) {
                 </a>
                 <ul class='dropdown-menu dropdown-menu-dark'>
                     <li><a class='dropdown-item'>Nejste přihlášen.</a></li>
-                    <li><hr class='dropdown-divider'></li>
+                    <li><hr class='dropdown-divider-light'></li>
                     <li><a class='dropdown-item text-primary'href='login.php'>Přihlásit</a></li>
                 </ul>
                 </li>";
@@ -44,7 +44,7 @@ if ($_SESSION['role'] === 'admin') {
                 </a>
                 <ul class='dropdown-menu dropdown-menu-dark'>
                     <li><a class='dropdown-item'>Správce</li>
-                    <li><hr class='dropdown-divider'></li>
+                    <li><hr class='dropdown-divider-light'></li>
                     <li><a class='dropdown-item text-danger' href='logout.php'>Odhlásit</a></li>
                 </ul>
                 </li>";
