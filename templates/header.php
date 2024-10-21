@@ -8,6 +8,8 @@ if ($_SESSION['logged_in'] == null) {
 }
 $approve_btn = '';
 $user_icon = '';
+$login_link = '';
+
 if ($_SESSION['logged_in'] == true) {
     $user_icon = "
                 <li class='nav-item dropdown'>
@@ -89,15 +91,10 @@ if ($_SESSION['logged_in'] == true) {
                         <a class="nav-link" href="lost_items.php">Ztracené předměty</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="add.php">Přidat nález</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Přihlášení</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.php">Registrace</a>
+                        <at class="nav-link" href="add.php">Přidat nález</at
                     </li>
                     <?php echo $approve_btn; ?>
+                    <?php echo $login_link; ?>
                     <?php echo $user_icon; ?>
                 </ul>
             </div>
