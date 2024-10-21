@@ -18,8 +18,9 @@ try {
         foreach ($items as $item) {
             echo " 
                 <div class='col'>
-                    <div class='card h-100'>
-                        <img src='{$item['image_url']}' class='card-img-top' alt='{$item['name']}'>
+                    <div class='card h-100 border-black border-3'>
+                        <img src='{$item['image_url']}' class='card-img-top' alt='{$item['name']}'
+                             style='object-fit: cover; width: 100%; height: 250px;'>
                         <div class='card-body'>
                             <h5 class='card-title'>{$item['name']}</h5>
                             <p class='card-text'>{$item['description']}</p>
@@ -38,6 +39,7 @@ try {
 ?>
 
 <?php include 'templates/footer.php'; ?>
+
 <!-- 
 <div class='card mb-4' style='max-width: 200px;'>
                     <div class='card'>

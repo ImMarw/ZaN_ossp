@@ -1,4 +1,5 @@
 <?php include 'templates/header.php'; ?>
+<link rel="stylesheet" href="style.css">
 <div class="container">
     <h1 class="text-center mb-5">Přidat ztracený předmět</h1>
     <form action="submit_item.php" method="post" enctype="multipart/form-data">

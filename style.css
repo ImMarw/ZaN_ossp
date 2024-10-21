@@ -25,3 +25,14 @@ h2 {
 footer {
     border-top: 1px solid #ddd;
 }
+
+input.form-control, textarea.form-control {
+    border: 2px solid #000; /* Černý okraj o tloušťce 2px */
+    border-radius: 5px;     /* Zaoblení rohů */
+    padding: 10px;          /* Vnitřní odsazení */
+}
+
+input.form-control:focus, textarea.form-control:focus {
+    border-color: #007bff; /* Změna barvy na modrou při zaměření */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Lehký stín */
+}
