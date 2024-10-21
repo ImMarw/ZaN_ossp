@@ -9,7 +9,7 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Popis předmětu</label>
-            <textarea class="form-control" id="description" name="description" rows="4" maxlength ="100" required></textarea>
+            <textarea class="form-control" id="description" name="description" rows="4" maxlength ="100" required>Našel jsem / Ztratil jsem</textarea>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Obrázek předmětu</label>
