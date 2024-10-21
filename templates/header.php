@@ -20,22 +20,22 @@ if ($_SESSION['logged_in'] == true) {
                     <li><a class='dropdown-item text-primary'href='login.php'>Přihlásit</a></li>
                 </ul>
                 </li>";
-    } else {
-        $login_link = "
+} else {
+    $login_link = "
     <li class='nav-item'>
         <a class='nav-link' href='login.php'>Přihlášení</a>
     </li>
     <li class='nav-item'>
         <a class='nav-link' href='register.php'>Registrace</a>
     </li>";
-    }
+}
 
-    if ($_SESSION['role'] === 'admin') {
-        $approve_btn = '
+if ($_SESSION['role'] === 'admin') {
+    $approve_btn = '
         <li class="nav-item">
             <a class="nav-link" href="approver.php">Approver</a>
         </li>';
-        $user_icon = "
+    $user_icon = "
                 <li class='nav-item dropdown'>
                 <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
                     {$_SESSION['username']}
@@ -46,15 +46,15 @@ if ($_SESSION['logged_in'] == true) {
                     <li><a class='dropdown-item text-danger' href='logout.php'>Odhlásit</a></li>
                 </ul>
                 </li>";
-    } else {
-        $login_link = "
+} else {
+    $login_link = "
     <li class='nav-item'>
         <a class='nav-link' href='login.php'>Přihlášení</a>
     </li>
     <li class='nav-item'>
         <a class='nav-link' href='register.php'>Registrace</a>
     </li>";
-    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -105,4 +105,5 @@ if ($_SESSION['logged_in'] == true) {
     </nav>
     <div class="container mt-4">
 </body>
+
 </html>
