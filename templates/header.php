@@ -10,20 +10,52 @@ $approve_btn = '';
 $user_icon = '';
 if ($_SESSION['logged_in'] == true) {
     $user_icon = "
+                <li class='nav-item dropdown'>
+                <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                    {$_SESSION['username']}
+                </a>
+                <ul class='dropdown-menu dropdown-menu-dark'>
+                    <li><a class='dropdown-item'>Nejste přihlášen.</a></li>
+                    <li><hr class='dropdown-divider'></li>
+                    <li><a class='dropdown-item text-primary'href='login.php'>Přihlásit</a></li>
+                </ul>
+                </li>";
+    } else {
+        $login_link = "
     <li class='nav-item'>
-        <a class='nav-link' href='logout.php'> {$_SESSION['username']}</a>
+        <a class='nav-link' href='login.php'>Přihlášení</a>
+    </li>
+    <li class='nav-item'>
+        <a class='nav-link' href='register.php'>Registrace</a>
     </li>";
+    }
+
     if ($_SESSION['role'] === 'admin') {
         $approve_btn = '
         <li class="nav-item">
             <a class="nav-link" href="approver.php">Approver</a>
         </li>';
         $user_icon = "
-        <li class='nav-item'>
-            <a class='nav-link' href='logout.php'> {$_SESSION['username']} - admin</a>
-        </li>";
+                <li class='nav-item dropdown'>
+                <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                    {$_SESSION['username']}
+                </a>
+                <ul class='dropdown-menu dropdown-menu-dark'>
+                    <li><a class='dropdown-item'>Správce</li>
+                    <li><hr class='dropdown-divider'></li>
+                    <li><a class='dropdown-item text-danger' href='logout.php'>Odhlásit</a></li>
+                </ul>
+                </li>";
+    } else {
+        $login_link = "
+    <li class='nav-item'>
+        <a class='nav-link' href='login.php'>Přihlášení</a>
+    </li>
+    <li class='nav-item'>
+        <a class='nav-link' href='register.php'>Registrace</a>
+    </li>";
     }
-}
+
 ?>
 <!DOCTYPE html>
 <html lang="cs">
@@ -73,5 +105,4 @@ if ($_SESSION['logged_in'] == true) {
     </nav>
     <div class="container mt-4">
 </body>
-
 </html>
